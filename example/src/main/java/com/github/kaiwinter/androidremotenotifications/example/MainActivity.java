@@ -22,9 +22,7 @@ public class MainActivity extends Activity {
 
     private static final String JSON_URL = "https://raw.githubusercontent.com/kaiwinter/android-remote-notifications/master/example/src/test/resources/notifications.json";
     private RemoteNotifications remoteNotifications;
-
     private TextView textViewStatus;
-
     private TextView textViewNotifications;
 
     @Override
@@ -38,7 +36,7 @@ public class MainActivity extends Activity {
 
         initializeARN();
     }
-
+    
     private void initializeARN() {
         try {
             URL url = new URL(JSON_URL);
@@ -46,7 +44,6 @@ public class MainActivity extends Activity {
         } catch (MalformedURLException e) {
             Log.e("ARN-example", "URL cannot be parsed", e);
         }
-
         updateNotificationText();
     }
 
